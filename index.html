@@ -4,264 +4,259 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Manvita Hub</title>
-<meta name="description" content="Manvita Hub builds studio and project management software for interior designers, architects, contractors and engineers. Dhule, Maharashtra, India.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f3d3e'/%3E%3Cpath d='M15 46V20l17 15 17-15v26' fill='none' stroke='%23f2b544' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='15' cy='20' r='4.5' fill='%23fff'/%3E%3Ccircle cx='49' cy='20' r='4.5' fill='%23fff'/%3E%3Ccircle cx='32' cy='35' r='4.5' fill='%23fff'/%3E%3C/svg%3E">
+<meta name="description" content="Manvita Hub is studio management software for interior designers, architects and contractors: leads, proposals, site reports and fees in one place. One-time payment, lifetime use. Dhule, Maharashtra.">
+<meta property="og:title" content="Manvita Hub, studio management software">
+<meta property="og:description" content="Leads, proposals, site reports and fees in one calm place. One-time payment, lifetime use, customised to your studio.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* Layout: product landing page. Teal "studio ledger" palette, amber highlight, real product features, legal block at the end */
-  --bg: #f7f5f0;
-  --surface: #ffffff;
-  --ink: #142624;
-  --muted: #5a6b68;
-  --brand: #0f3d3e;
-  --accent: #f2b544;
-  --line: #e3ded3;
-  --soft: #e8f0ee;
-  --font-display: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
-  --font-body: "Manrope", "Segoe UI", Roboto, Arial, sans-serif;
+  /* Layout: same visual world as the Manvita Hub app. Slate ink, warm plaster paper, terracotta and brass accents. Editorial serif headings, clean sans body. */
+  --paper: #f6f1ea;
+  --paper-2: #efe7db;
+  --surface: #fffdf9;
+  --ink: #2c3534;
+  --slate: #354141;
+  --slate-deep: #232b2b;
+  --muted: #6b716c;
+  --terracotta: #8c5946;
+  --brass: #b8a17f;
+  --sage: #5d7364;
+  --line: #e2d8c9;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Jost", "Segoe UI", Roboto, Arial, sans-serif;
   color-scheme: light;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
-a { color: var(--brand); }
-a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
-h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.65; }
+a { color: var(--terracotta); }
+a:focus-visible, .btn:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.08; text-wrap: balance; margin: 0; }
 p { margin: 0; }
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 22px; }
+.eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--brass); font-weight: 600; }
 
-/* Header */
-.top { position: sticky; top: 0; z-index: 10; background: rgba(247,245,240,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
-.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
-.logo svg { width: 38px; height: 38px; flex: none; }
-.logo b { font-family: var(--font-display); font-size: 21px; letter-spacing: -0.01em; }
-.logo small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-top: -2px; }
-nav { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; font-size: 15px; font-weight: 600; }
-nav a { text-decoration: none; color: var(--ink); }
-nav a:hover { color: var(--brand); text-decoration: underline; }
-.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 15px; border: 2px solid transparent; }
-.btn-primary { background: var(--brand); color: #fff; }
-.btn-primary:hover { background: #0b2f30; }
-.btn-ghost { border-color: var(--brand); color: var(--brand); background: transparent; }
-.btn-small { padding: 8px 14px; font-size: 14px; }
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 600; font-size: 15px; letter-spacing: .02em; text-decoration: none; border: 1px solid transparent; }
+.btn-solid { background: var(--terracotta); color: #fff; }
+.btn-solid:hover { background: #774a3a; }
+.btn-line { border-color: rgba(246,241,234,.55); color: var(--paper); }
+.btn-line:hover { background: rgba(246,241,234,.08); }
+.btn-dark { background: var(--slate); color: var(--paper); }
+.btn-dark:hover { background: var(--slate-deep); }
 
-/* Hero */
-.hero { padding: 64px 0 56px; }
-.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
-.tag { display: inline-block; background: var(--soft); color: var(--brand); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 999px; margin-bottom: 18px; }
-.hero h1 { font-size: clamp(34px, 5vw, 54px); letter-spacing: -0.02em; }
-.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--accent) 62%); }
-.hero p.lead { font-size: 19px; color: var(--muted); margin: 20px 0 28px; max-width: 56ch; }
-.cta { display: flex; gap: 12px; flex-wrap: wrap; }
-.hero-note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+/* Header over hero */
+.hero { background: radial-gradient(120% 90% at 85% 10%, #42504f 0%, var(--slate) 45%, var(--slate-deep) 100%); color: var(--paper); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 22px 0; }
+.brand { display: flex; align-items: center; gap: 12px; color: var(--paper); text-decoration: none; }
+.brand img { width: 48px; height: 48px; }
+.brand b { display: block; font-family: var(--font-display); font-size: 26px; font-weight: 600; line-height: 1; }
+.brand small { display: block; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--brass); margin-top: 4px; }
+.links { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+.links a { color: var(--paper); text-decoration: none; opacity: .85; }
+.links a:hover { opacity: 1; text-decoration: underline; }
+.links .btn { text-transform: none; letter-spacing: .02em; opacity: 1; padding: 9px 18px; }
 
-/* App mock */
-.mock { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 24px 60px -28px rgba(15,61,62,.45); overflow: hidden; }
-.mock-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--brand); color: #fff; font-size: 13px; font-weight: 600; }
-.mock-bar i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.35); display: inline-block; }
-.mock-bar span { margin-left: 8px; }
-.mock-body { padding: 18px; display: grid; gap: 14px; }
-.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.kpi { background: var(--bg); border-radius: 10px; padding: 10px 12px; }
-.kpi small { color: var(--muted); font-size: 12px; font-weight: 600; }
-.kpi b { display: block; font-family: var(--font-display); font-size: 22px; font-variant-numeric: tabular-nums; }
-.rows { display: grid; gap: 8px; }
-.row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
-.row small { display: block; color: var(--muted); font-size: 12px; }
-.pill { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
-.pill.due { background: #fdecc8; color: #7a4f00; }
-.pill.ok { background: #d9efe7; color: #0e5a3e; }
-.pill.new { background: #e3e8f8; color: #2b3f86; }
-.mock-foot { font-size: 12px; color: var(--muted); padding: 0 18px 14px; }
+.hero-main { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; padding: 48px 0 84px; }
+.hero h1 { font-size: clamp(42px, 6.2vw, 76px); margin: 16px 0 22px; }
+.hero h1 em { font-style: italic; color: #e7c9b6; }
+.hero .lead { font-size: 19px; color: #d8d3c9; max-width: 54ch; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero .fine { margin-top: 16px; font-size: 14px; color: #b9b3a7; }
+.ticks { list-style: none; padding: 0; margin: 34px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; border-top: 1px solid rgba(246,241,234,.18); padding-top: 22px; }
+.ticks li { font-size: 14px; color: #d8d3c9; line-height: 1.45; }
+.ticks li::before { content: ""; display: block; width: 26px; height: 1px; background: var(--brass); margin-bottom: 10px; }
+
+/* Product card */
+.app { background: var(--paper); color: var(--ink); border-radius: 20px; box-shadow: 0 40px 80px -40px rgba(0,0,0,.6); overflow: hidden; }
+.app-top { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.app-top .who { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 20px; font-weight: 600; }
+.app-top img { width: 30px; height: 30px; }
+.app-top span.date { font-size: 12px; color: var(--muted); }
+.app-body { padding: 18px; display: grid; gap: 14px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.stat small { display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.stat b { font-family: var(--font-display); font-size: 28px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.item { display: grid; grid-template-columns: 6px 1fr auto; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 14px; }
+.item i { width: 6px; align-self: stretch; border-radius: 4px; }
+.item small { display: block; color: var(--muted); font-size: 12px; }
+.chip { font-size: 11px; font-weight: 600; letter-spacing: .04em; padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+.c-tc { background: #f3e2d9; color: var(--terracotta); } .s-tc { background: var(--terracotta); }
+.c-sg { background: #e1e9e3; color: #3e5446; } .s-sg { background: var(--sage); }
+.c-br { background: #efe6d6; color: #7a6646; } .s-br { background: var(--brass); }
+.app-foot { padding: 0 18px 14px; font-size: 12px; color: var(--muted); }
 
 /* Sections */
-section { padding: 64px 0; }
-.sec-head { max-width: 680px; margin-bottom: 36px; }
-.sec-head h2 { font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.015em; }
-.sec-head p { color: var(--muted); margin-top: 12px; font-size: 17px; }
-.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
-.alt .card { background: var(--bg); }
-.card .ico { width: 42px; height: 42px; border-radius: 10px; background: var(--soft); display: grid; place-items: center; margin-bottom: 14px; }
-.card .ico svg { width: 22px; height: 22px; stroke: var(--brand); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.card h3 { font-size: 19px; margin-bottom: 8px; }
-.card p { color: var(--muted); font-size: 15px; }
+section { padding: 88px 0; }
+.head { max-width: 700px; margin-bottom: 44px; }
+.head h2 { font-size: clamp(34px, 4.4vw, 50px); margin-top: 10px; }
+.head p { margin-top: 14px; color: var(--muted); font-size: 18px; }
+.band { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
-.who { display: flex; flex-wrap: wrap; gap: 10px; }
-.who span { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-weight: 600; }
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.feature { padding: 30px 28px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.feature .n { font-family: var(--font-display); font-style: italic; color: var(--terracotta); font-size: 20px; }
+.feature h3 { font-size: 26px; margin: 6px 0 10px; }
+.feature p { color: var(--muted); font-size: 16px; }
 
-.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
-.step { border-top: 3px solid var(--accent); padding-top: 16px; }
-.step b { font-family: var(--font-display); font-size: 14px; color: var(--muted); display: block; margin-bottom: 6px; }
-.step h3 { font-size: 18px; margin-bottom: 6px; }
-.step p { color: var(--muted); font-size: 15px; }
+.audience { display: flex; flex-wrap: wrap; gap: 12px; }
+.audience span { border: 1px solid var(--line); background: var(--surface); padding: 10px 20px; border-radius: 999px; font-size: 16px; }
 
-.price { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: start; }
-.price ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
-.price li { display: flex; gap: 12px; align-items: flex-start; }
-.price li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 50%; background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%230f3d3e' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
-.quote-box { background: var(--brand); color: #fff; border-radius: 16px; padding: 28px; }
-.quote-box h3 { font-size: 24px; margin-bottom: 10px; }
-.quote-box p { color: #cfe0dd; margin-bottom: 20px; }
-.quote-box .btn-primary { background: var(--accent); color: var(--brand); }
+.journey { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.journey div { border-top: 2px solid var(--slate); padding-top: 18px; }
+.journey b { font-family: var(--font-display); font-size: 40px; font-weight: 500; color: var(--brass); line-height: 1; }
+.journey h3 { font-size: 24px; margin: 10px 0 8px; }
+.journey p { color: var(--muted); font-size: 16px; }
 
-.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
-dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 12px 22px; margin: 0; }
-dl.facts dt { color: var(--muted); font-size: 14px; font-weight: 600; }
-dl.facts dd { margin: 0; font-weight: 600; }
+.pricing { display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
+.pricing ul { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 14px; }
+.pricing li { padding-left: 30px; position: relative; }
+.pricing li::before { content: ""; position: absolute; left: 0; top: 11px; width: 16px; height: 1px; background: var(--terracotta); }
+.offer { background: var(--slate); color: var(--paper); border-radius: 20px; padding: 36px; }
+.offer .big { font-family: var(--font-display); font-size: 48px; line-height: 1; }
+.offer .big em { font-style: italic; color: #e7c9b6; }
+.offer p { color: #d8d3c9; margin: 14px 0 26px; }
 
-footer { background: #0b2b2c; color: #c9d8d5; padding: 40px 0 28px; font-size: 14px; }
-footer .wrap { display: grid; gap: 20px; }
-footer .cols { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; }
-footer a { color: #fff; }
-footer .logo { color: #fff; }
-footer .legal { border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; color: #9fb5b1; }
+.contact { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; }
+dl.facts { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 14px 26px; }
+dl.facts dt { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); padding-top: 4px; }
+dl.facts dd { margin: 0; font-size: 18px; }
+dl.facts a { color: var(--ink); text-decoration-color: var(--brass); }
 
-@media (max-width: 900px) {
-  .hero .wrap, .price, .contact { grid-template-columns: 1fr; }
-  .grid3 { grid-template-columns: 1fr 1fr; }
-  .steps { grid-template-columns: 1fr 1fr; }
+footer { background: var(--slate-deep); color: #b9b3a7; padding: 46px 0 30px; font-size: 14px; }
+footer .row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 28px; }
+footer .brand b { font-size: 24px; }
+footer nav { display: grid; gap: 6px; }
+footer a { color: var(--paper); }
+footer .legal { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(246,241,234,.14); }
+
+@media (max-width: 920px) {
+  .hero-main, .pricing, .contact { grid-template-columns: 1fr; }
+  .features { grid-template-columns: 1fr 1fr; }
+  .journey { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 560px) {
-  .grid3, .steps { grid-template-columns: 1fr; }
-  nav .hide-sm { display: none; }
+@media (max-width: 580px) {
+  .features, .journey, .ticks { grid-template-columns: 1fr; }
+  .links a.hide-sm { display: none; }
   dl.facts { grid-template-columns: 1fr; gap: 2px; }
-  dl.facts dd { margin-bottom: 10px; }
-  .kpis { grid-template-columns: 1fr 1fr 1fr; }
+  dl.facts dd { margin-bottom: 12px; }
+  section { padding: 64px 0; }
 }
 </style>
 </head>
 <body>
 
-<header class="top">
+<header class="hero" id="top">
   <div class="wrap">
-    <a class="logo" href="#top" aria-label="Manvita Hub home">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0f3d3e"/><path d="M15 46V20l17 15 17-15v26" fill="none" stroke="#f2b544" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="20" r="4.5" fill="#fff"/><circle cx="49" cy="20" r="4.5" fill="#fff"/><circle cx="32" cy="35" r="4.5" fill="#fff"/></svg>
-      <span><b>Manvita Hub</b><small>Studio software</small></span>
-    </a>
-    <nav aria-label="Main">
-      <a class="hide-sm" href="#features">Features</a>
-      <a class="hide-sm" href="#who">Who it's for</a>
-      <a class="hide-sm" href="#pricing">Pricing</a>
-      <a class="hide-sm" href="#contact">Contact</a>
-      <a class="btn btn-primary btn-small" href="https://wa.me/918308707714?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20Manvita%20Hub">Book a demo</a>
-    </nav>
+    <div class="nav">
+      <a class="brand" href="#top">
+        <img src="data:image/png;base64,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" alt="Manvita Hub logo">
+        <span><b>Manvita Hub</b><small>Studio management software</small></span>
+      </a>
+      <nav class="links" aria-label="Main">
+        <a class="hide-sm" href="#features">Features</a>
+        <a class="hide-sm" href="#pricing">Pricing</a>
+        <a class="hide-sm" href="#contact">Contact</a>
+        <a class="hide-sm" href="https://manvita-hub-projects.web.app/">Sign in</a>
+        <a class="btn btn-solid" href="https://wa.me/918308707714?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20Manvita%20Hub">Book a demo</a>
+      </nav>
+    </div>
+
+    <div class="hero-main">
+      <div>
+        <p class="eyebrow">Your studio, beautifully run</p>
+        <h1>Every space. Every client. <em>Every rupee.</em></h1>
+        <p class="lead">From the first enquiry to the final handover: leads, proposals, site reports and fees, together in one calm place. Built for interior designers, architects and contractors.</p>
+        <div class="cta">
+          <a class="btn btn-solid" href="https://wa.me/918308707714?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20Manvita%20Hub">Book a free demo</a>
+          <a class="btn btn-line" href="#features">See what it does</a>
+        </div>
+        <p class="fine">One-time payment · lifetime use · customised to your studio</p>
+        <ul class="ticks">
+          <li>Proposals and estimates in your brand</li>
+          <li>Daily site reports with photos</li>
+          <li>Stage-wise fees, reminders and receipts</li>
+        </ul>
+      </div>
+
+      <div class="app" role="img" aria-label="Illustration of the Manvita Hub studio overview with sample data">
+        <div class="app-top">
+          <span class="who"><img src="data:image/png;base64,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" alt="">Studio overview</span>
+          <span class="date">Sample data</span>
+        </div>
+        <div class="app-body">
+          <div class="stats">
+            <div class="stat"><small>Projects</small><b>12</b></div>
+            <div class="stat"><small>New leads</small><b>8</b></div>
+            <div class="stat"><small>Fees due</small><b>₹1.4L</b></div>
+          </div>
+          <div class="item"><i class="s-tc"></i><div>3BHK interior, site measurement<small>Today, 4:00 pm</small></div><span class="chip c-tc">Visit due</span></div>
+          <div class="item"><i class="s-sg"></i><div>Kitchen and wardrobes, stage 2<small>Instalment received, receipt sent</small></div><span class="chip c-sg">Paid</span></div>
+          <div class="item"><i class="s-br"></i><div>Office cabin enquiry<small>Proposal ready to share</small></div><span class="chip c-br">Proposal</span></div>
+        </div>
+        <p class="app-foot">Illustration only. Names and figures are examples.</p>
+      </div>
+    </div>
   </div>
 </header>
 
-<main id="top">
-  <div class="hero">
+<main>
+  <section id="features">
     <div class="wrap">
-      <div>
-        <span class="tag">Made in Dhule, Maharashtra</span>
-        <h1>Run every project, lead and payment from <em>one hub</em>.</h1>
-        <p class="lead">Manvita Hub is studio management software for interior designers, architects, contractors and engineers. Track leads, site tasks, client fees and project costs, and get daily reminders so nothing slips.</p>
-        <div class="cta">
-          <a class="btn btn-primary" href="https://wa.me/918308707714?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20Manvita%20Hub">Book a free demo on WhatsApp</a>
-          <a class="btn btn-ghost" href="#features">See features</a>
-        </div>
-        <p class="hero-note">One-time payment. No monthly subscription.</p>
-      </div>
-
-      <div class="mock" aria-label="Illustration of the Manvita Hub dashboard with sample data">
-        <div class="mock-bar"><i></i><i></i><i></i><span>Studio overview</span></div>
-        <div class="mock-body">
-          <div class="kpis">
-            <div class="kpi"><small>Active projects</small><b>12</b></div>
-            <div class="kpi"><small>New leads</small><b>8</b></div>
-            <div class="kpi"><small>Fees due</small><b>₹1.4L</b></div>
-          </div>
-          <div class="rows">
-            <div class="row"><div>3BHK interior, site measurement<small>Today, 4:00 pm</small></div><span class="pill due">Task due</span></div>
-            <div class="row"><div>Kitchen and wardrobe project<small>2nd instalment received</small></div><span class="pill ok">Paid</span></div>
-            <div class="row"><div>Office cabin enquiry<small>From WhatsApp</small></div><span class="pill new">New lead</span></div>
-          </div>
-        </div>
-        <p class="mock-foot">Sample data for illustration.</p>
-      </div>
-    </div>
-  </div>
-
-  <section id="features" class="alt">
-    <div class="wrap">
-      <div class="sec-head">
+      <div class="head">
+        <p class="eyebrow">What it does</p>
         <h2>Everything a studio tracks, in one place</h2>
-        <p>Built from the day-to-day work of a running interior design studio, then opened up for other firms.</p>
+        <p>Built inside a working interior design studio in Dhule, then opened up for other firms.</p>
       </div>
-      <div class="grid3">
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <h3>Leads and enquiries</h3>
-          <p>Log every enquiry, see who has been contacted, and follow up before a lead goes cold.</p>
-        </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <h3>Site tasks and visits</h3>
-          <p>Plan site visits, measurements and carpenter work, with a clear list of what is due today.</p>
-        </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
-          <h3>Fees and payments</h3>
-          <p>Record client instalments and see pending fees at a glance, project by project.</p>
-        </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
-          <h3>Project costing</h3>
-          <p>For turnkey and with-material jobs: track costs already spent and costs still coming.</p>
-        </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
-          <h3>Daily reminders</h3>
-          <p>A morning summary of fees and tasks, sent to the studio owner every day.</p>
-        </div>
-        <div class="card">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div>
-          <h3>Voice entry</h3>
-          <p>Add leads and tasks by speaking in Hindi, Marathi or English. The app asks for anything missing.</p>
-        </div>
+      <div class="features">
+        <div class="feature"><span class="n">i.</span><h3>Leads and enquiries</h3><p>Log every enquiry, see who has been contacted, and follow up before a lead goes cold.</p></div>
+        <div class="feature"><span class="n">ii.</span><h3>Proposals and estimates</h3><p>Send clean proposals and estimates with your studio's own name and logo.</p></div>
+        <div class="feature"><span class="n">iii.</span><h3>Daily site reports</h3><p>Record site progress with photos so clients and your team see the same picture.</p></div>
+        <div class="feature"><span class="n">iv.</span><h3>Stage-wise fees</h3><p>Set fees by stage, send reminders and receipts, and see what is pending at a glance.</p></div>
+        <div class="feature"><span class="n">v.</span><h3>Project costing</h3><p>For turnkey and with-material jobs, track costs already spent and costs still to come.</p></div>
+        <div class="feature"><span class="n">vi.</span><h3>Voice entry</h3><p>Add leads and tasks by speaking in Hindi, Marathi or English. The app asks for anything missing.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="who">
+  <section class="band">
     <div class="wrap">
-      <div class="sec-head">
-        <h2>Who it's for</h2>
-        <p>Any firm that juggles clients, sites and payments at the same time.</p>
+      <div class="head">
+        <p class="eyebrow">Who it's for</p>
+        <h2>For firms that juggle clients, sites and payments</h2>
       </div>
-      <div class="who">
-        <span>Interior designers</span><span>Architects</span><span>Contractors</span><span>Civil engineers</span><span>Construction firms</span><span>Turnkey project studios</span>
+      <div class="audience">
+        <span>Interior designers</span><span>Architects</span><span>Contractors</span><span>Civil engineers</span><span>Construction firms</span><span>Turnkey studios</span>
       </div>
     </div>
   </section>
 
-  <section class="alt">
+  <section>
     <div class="wrap">
-      <div class="sec-head">
-        <h2>How we work with you</h2>
+      <div class="head">
+        <p class="eyebrow">How we work</p>
+        <h2>From demo to daily use</h2>
       </div>
-      <div class="steps">
-        <div class="step"><b>Step 1</b><h3>Free demo</h3><p>We show you the hub on a call or in person and listen to how your studio runs.</p></div>
-        <div class="step"><b>Step 2</b><h3>Your branding</h3><p>The hub carries your studio's name and logo, so your team and clients see your brand.</p></div>
-        <div class="step"><b>Step 3</b><h3>Custom setup</h3><p>We switch on only the modules you need and add your projects and team.</p></div>
-        <div class="step"><b>Step 4</b><h3>Support</h3><p>We help you get started and stay reachable on WhatsApp and phone.</p></div>
+      <div class="journey">
+        <div><b>01</b><h3>Free demo</h3><p>We walk you through the hub on a call or in person and learn how your studio works.</p></div>
+        <div><b>02</b><h3>Your branding</h3><p>The hub carries your studio's name and logo for your team and your clients.</p></div>
+        <div><b>03</b><h3>Custom setup</h3><p>We switch on only the modules you need and bring in your projects and team.</p></div>
+        <div><b>04</b><h3>Ongoing support</h3><p>We stay reachable on WhatsApp and phone while you settle in.</p></div>
       </div>
     </div>
   </section>
 
-  <section id="pricing">
-    <div class="wrap price">
+  <section id="pricing" class="band">
+    <div class="wrap pricing">
       <div>
-        <div class="sec-head">
-          <h2>Simple pricing: pay once, use for life</h2>
-          <p>No monthly subscription. The price depends on the modules and customisation your studio needs.</p>
-        </div>
+        <p class="eyebrow">Pricing</p>
+        <h2 style="font-size:clamp(34px,4.4vw,50px);margin-top:10px">Pay once. Use it for life.</h2>
+        <p style="margin-top:14px;color:var(--muted);font-size:18px">No monthly subscription. The price depends on the modules and customisation your studio needs.</p>
         <ul>
           <li>One-time payment for lifetime use</li>
           <li>Your studio's own branding inside the app</li>
@@ -269,24 +264,25 @@ footer .legal { border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; 
           <li>Works on phone and computer, in the browser</li>
         </ul>
       </div>
-      <div class="quote-box">
-        <h3>Get a quote for your studio</h3>
+      <div class="offer">
+        <p class="big">Get a quote for <em>your</em> studio</p>
         <p>Tell us your team size and how you work. We will suggest a setup and share the price.</p>
-        <a class="btn btn-primary" href="https://wa.me/918308707714?text=Hi%2C%20please%20share%20Manvita%20Hub%20pricing">Ask for a quote on WhatsApp</a>
+        <a class="btn btn-solid" href="https://wa.me/918308707714?text=Hi%2C%20please%20share%20Manvita%20Hub%20pricing">Ask on WhatsApp</a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="alt">
+  <section id="contact">
     <div class="wrap contact">
-      <div class="sec-head">
-        <h2>Contact us</h2>
+      <div class="head">
+        <p class="eyebrow">Contact</p>
+        <h2>Talk to us</h2>
         <p>We reply on WhatsApp, phone and email, Monday to Saturday, 10 am to 7 pm.</p>
       </div>
       <dl class="facts">
         <dt>Business</dt><dd>Manvita Hub</dd>
         <dt>Proprietor</dt><dd>Disha Manoj Agrawal</dd>
-        <dt>Phone / WhatsApp</dt><dd><a href="tel:+918308707714">+91 83087 07714</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+918308707714">+91 83087 07714</a> (WhatsApp)</dd>
         <dt>Email</dt><dd><a href="mailto:manvitahub2305@gmail.com">manvitahub2305@gmail.com</a></dd>
         <dt>Address</dt><dd>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule, Maharashtra 424001, India</dd>
       </dl>
@@ -296,19 +292,20 @@ footer .legal { border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; 
 
 <footer>
   <div class="wrap">
-    <div class="cols">
+    <div class="row">
       <div>
-        <a class="logo" href="#top" aria-label="Manvita Hub home">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1a5556"/><path d="M15 46V20l17 15 17-15v26" fill="none" stroke="#f2b544" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="20" r="4.5" fill="#fff"/><circle cx="49" cy="20" r="4.5" fill="#fff"/><circle cx="32" cy="35" r="4.5" fill="#fff"/></svg>
-          <span><b>Manvita Hub</b></span>
+        <a class="brand" href="#top">
+          <img src="data:image/png;base64,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" alt="">
+          <span><b>Manvita Hub</b><small>Studio management software</small></span>
         </a>
-        <p style="margin-top:10px;max-width:40ch">Software development and studio management solutions for businesses.</p>
+        <p style="margin-top:14px;max-width:44ch">Software development and studio management solutions for businesses.</p>
       </div>
-      <div>
-        <p><a href="privacy.html">Privacy policy</a></p>
-        <p><a href="privacy.html#data-deletion">Data deletion</a></p>
-        <p><a href="privacy.html#terms">Terms of service</a></p>
-      </div>
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy policy</a>
+        <a href="privacy.html#data-deletion">Data deletion</a>
+        <a href="privacy.html#terms">Terms of service</a>
+        <a href="https://manvita-hub-projects.web.app/">Sign in to the Hub</a>
+      </nav>
     </div>
     <p class="legal">© 2026 Manvita Hub, a sole proprietorship registered under the Maharashtra Shops and Establishments Act. Plot No. 135, Chitod Road, Sudarshan Colony, Dhule (Municipal Corporation), Taluka &amp; District Dhule, Maharashtra 424001, India.</p>
   </div>
