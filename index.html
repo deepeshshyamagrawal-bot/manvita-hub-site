@@ -4,177 +4,313 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Manvita Hub</title>
-<meta name="description" content="Manvita Hub, software development and CRM solutions for businesses. Dhule, Maharashtra, India.">
+<meta name="description" content="Manvita Hub builds studio and project management software for interior designers, architects, contractors and engineers. Dhule, Maharashtra, India.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f3d3e'/%3E%3Cpath d='M15 46V20l17 15 17-15v26' fill='none' stroke='%23f2b544' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='15' cy='20' r='4.5' fill='%23fff'/%3E%3Ccircle cx='49' cy='20' r='4.5' fill='%23fff'/%3E%3Ccircle cx='32' cy='35' r='4.5' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  /* Layout: one centred column, letterhead-style header, plain business-record sections */
-  --bg: #f6f7f9;
+  /* Layout: product landing page. Teal "studio ledger" palette, amber highlight, real product features, legal block at the end */
+  --bg: #f7f5f0;
   --surface: #ffffff;
-  --ink: #17202b;
-  --muted: #566273;
-  --accent: #1f5f8b;
-  --line: #dde2e8;
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --ink: #142624;
+  --muted: #5a6b68;
+  --brand: #0f3d3e;
+  --accent: #f2b544;
+  --line: #e3ded3;
+  --soft: #e8f0ee;
+  --font-display: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
+  --font-body: "Manrope", "Segoe UI", Roboto, Arial, sans-serif;
   color-scheme: light;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #11161c; --surface: #18202a; --ink: #e6ebf1; --muted: #9aa7b6;
-    --accent: #7fb7de; --line: #2a3542; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #11161c; --surface: #18202a; --ink: #e6ebf1; --muted: #9aa7b6;
-  --accent: #7fb7de; --line: #2a3542; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0; background: var(--bg); color: var(--ink);
-  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.65; }
+a { color: var(--brand); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; text-wrap: balance; margin: 0; }
+p { margin: 0; }
+
+/* Header */
+.top { position: sticky; top: 0; z-index: 10; background: rgba(247,245,240,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.logo svg { width: 38px; height: 38px; flex: none; }
+.logo b { font-family: var(--font-display); font-size: 21px; letter-spacing: -0.01em; }
+.logo small { display: block; font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-top: -2px; }
+nav { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; font-size: 15px; font-weight: 600; }
+nav a { text-decoration: none; color: var(--ink); }
+nav a:hover { color: var(--brand); text-decoration: underline; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 10px; font-weight: 700; text-decoration: none; font-size: 15px; border: 2px solid transparent; }
+.btn-primary { background: var(--brand); color: #fff; }
+.btn-primary:hover { background: #0b2f30; }
+.btn-ghost { border-color: var(--brand); color: var(--brand); background: transparent; }
+.btn-small { padding: 8px 14px; font-size: 14px; }
+
+/* Hero */
+.hero { padding: 64px 0 56px; }
+.hero .wrap { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+.tag { display: inline-block; background: var(--soft); color: var(--brand); font-weight: 700; font-size: 13px; padding: 6px 12px; border-radius: 999px; margin-bottom: 18px; }
+.hero h1 { font-size: clamp(34px, 5vw, 54px); letter-spacing: -0.02em; }
+.hero h1 em { font-style: normal; background: linear-gradient(transparent 62%, var(--accent) 62%); }
+.hero p.lead { font-size: 19px; color: var(--muted); margin: 20px 0 28px; max-width: 56ch; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-note { margin-top: 18px; font-size: 14px; color: var(--muted); }
+
+/* App mock */
+.mock { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 24px 60px -28px rgba(15,61,62,.45); overflow: hidden; }
+.mock-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--brand); color: #fff; font-size: 13px; font-weight: 600; }
+.mock-bar i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,.35); display: inline-block; }
+.mock-bar span { margin-left: 8px; }
+.mock-body { padding: 18px; display: grid; gap: 14px; }
+.kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.kpi { background: var(--bg); border-radius: 10px; padding: 10px 12px; }
+.kpi small { color: var(--muted); font-size: 12px; font-weight: 600; }
+.kpi b { display: block; font-family: var(--font-display); font-size: 22px; font-variant-numeric: tabular-nums; }
+.rows { display: grid; gap: 8px; }
+.row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+.row small { display: block; color: var(--muted); font-size: 12px; }
+.pill { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.pill.due { background: #fdecc8; color: #7a4f00; }
+.pill.ok { background: #d9efe7; color: #0e5a3e; }
+.pill.new { background: #e3e8f8; color: #2b3f86; }
+.mock-foot { font-size: 12px; color: var(--muted); padding: 0 18px 14px; }
+
+/* Sections */
+section { padding: 64px 0; }
+.sec-head { max-width: 680px; margin-bottom: 36px; }
+.sec-head h2 { font-size: clamp(28px, 3.6vw, 38px); letter-spacing: -0.015em; }
+.sec-head p { color: var(--muted); margin-top: 12px; font-size: 17px; }
+.alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+.alt .card { background: var(--bg); }
+.card .ico { width: 42px; height: 42px; border-radius: 10px; background: var(--soft); display: grid; place-items: center; margin-bottom: 14px; }
+.card .ico svg { width: 22px; height: 22px; stroke: var(--brand); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.card h3 { font-size: 19px; margin-bottom: 8px; }
+.card p { color: var(--muted); font-size: 15px; }
+
+.who { display: flex; flex-wrap: wrap; gap: 10px; }
+.who span { background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font-weight: 600; }
+
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: step; }
+.step { border-top: 3px solid var(--accent); padding-top: 16px; }
+.step b { font-family: var(--font-display); font-size: 14px; color: var(--muted); display: block; margin-bottom: 6px; }
+.step h3 { font-size: 18px; margin-bottom: 6px; }
+.step p { color: var(--muted); font-size: 15px; }
+
+.price { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: start; }
+.price ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.price li { display: flex; gap: 12px; align-items: flex-start; }
+.price li::before { content: ""; flex: none; width: 20px; height: 20px; margin-top: 3px; border-radius: 50%; background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' fill='none' stroke='%230f3d3e' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+.quote-box { background: var(--brand); color: #fff; border-radius: 16px; padding: 28px; }
+.quote-box h3 { font-size: 24px; margin-bottom: 10px; }
+.quote-box p { color: #cfe0dd; margin-bottom: 20px; }
+.quote-box .btn-primary { background: var(--accent); color: var(--brand); }
+
+.contact { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 12px 22px; margin: 0; }
+dl.facts dt { color: var(--muted); font-size: 14px; font-weight: 600; }
+dl.facts dd { margin: 0; font-weight: 600; }
+
+footer { background: #0b2b2c; color: #c9d8d5; padding: 40px 0 28px; font-size: 14px; }
+footer .wrap { display: grid; gap: 20px; }
+footer .cols { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; }
+footer a { color: #fff; }
+footer .logo { color: #fff; }
+footer .legal { border-top: 1px solid rgba(255,255,255,.15); padding-top: 18px; color: #9fb5b1; }
+
+@media (max-width: 900px) {
+  .hero .wrap, .price, .contact { grid-template-columns: 1fr; }
+  .grid3 { grid-template-columns: 1fr 1fr; }
+  .steps { grid-template-columns: 1fr 1fr; }
 }
-.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
-header { background: var(--surface); border-bottom: 1px solid var(--line); }
-.head { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding: 20px 0; }
-.brand { display: flex; align-items: center; gap: 12px; }
-.mark {
-  width: 40px; height: 40px; border-radius: 8px; background: var(--accent); color: var(--surface);
-  display: grid; place-items: center; font-family: var(--font-display); font-size: 22px;
-}
-.brand-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 0; }
-nav { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; }
-a { color: var(--accent); }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-nav a { text-decoration: none; font-weight: 500; }
-nav a:hover { text-decoration: underline; }
-main { padding: 32px 0 48px; display: grid; gap: 24px; }
-section {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px;
-}
-h1, h2 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; line-height: 1.25; }
-h1 { font-size: 30px; margin: 0 0 8px; }
-h2 { font-size: 22px; margin: 0 0 12px; }
-h3 { font-size: 16px; margin: 20px 0 6px; }
-p { margin: 0 0 12px; max-width: 65ch; }
-.lede { color: var(--muted); font-size: 17px; }
-ul { margin: 0 0 12px; padding-left: 20px; }
-li { margin-bottom: 4px; }
-dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 0; }
-dl.facts dt { color: var(--muted); font-size: 14px; }
-dl.facts dd { margin: 0; font-weight: 500; }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
+  .grid3, .steps { grid-template-columns: 1fr; }
+  nav .hide-sm { display: none; }
   dl.facts { grid-template-columns: 1fr; gap: 2px; }
   dl.facts dd { margin-bottom: 10px; }
+  .kpis { grid-template-columns: 1fr 1fr 1fr; }
 }
-.small { font-size: 14px; color: var(--muted); }
-footer { border-top: 1px solid var(--line); background: var(--surface); }
-footer .wrap { padding: 20px; font-size: 14px; color: var(--muted); }
-footer p { margin: 0 0 4px; max-width: none; }
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap head">
-    <div class="brand">
-      <div class="mark" aria-hidden="true">M</div>
-      <p class="brand-name">Manvita Hub</p>
-    </div>
-    <nav aria-label="Sections">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-      <a href="#privacy">Privacy policy</a>
-      <a href="#data-deletion">Data deletion</a>
-      <a href="#terms">Terms</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Manvita Hub home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0f3d3e"/><path d="M15 46V20l17 15 17-15v26" fill="none" stroke="#f2b544" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="20" r="4.5" fill="#fff"/><circle cx="49" cy="20" r="4.5" fill="#fff"/><circle cx="32" cy="35" r="4.5" fill="#fff"/></svg>
+      <span><b>Manvita Hub</b><small>Studio software</small></span>
+    </a>
+    <nav aria-label="Main">
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#who">Who it's for</a>
+      <a class="hide-sm" href="#pricing">Pricing</a>
+      <a class="hide-sm" href="#contact">Contact</a>
+      <a class="btn btn-primary btn-small" href="https://wa.me/918308707714?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20Manvita%20Hub">Book a demo</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-  <section id="about">
-    <h1>Manvita Hub</h1>
-    <p class="lede">Software development and CRM solutions for businesses. Based in Dhule, Maharashtra, India.</p>
-    <dl class="facts">
-      <dt>Legal name</dt><dd>Manvita Hub</dd>
-      <dt>Proprietor</dt><dd>Disha Manoj Agrawal</dd>
-      <dt>Business type</dt><dd>Sole proprietorship, registered under the Maharashtra Shops and Establishments Act</dd>
-      <dt>Registered address</dt><dd>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule (Municipal Corporation), Taluka &amp; District Dhule, Maharashtra 424001, India</dd>
-      <dt>Phone / WhatsApp</dt><dd>+91 83087 07714</dd>
-      <dt>Email</dt><dd>manvitahub2305@gmail.com</dd>
-    </dl>
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag">Made in Dhule, Maharashtra</span>
+        <h1>Run every project, lead and payment from <em>one hub</em>.</h1>
+        <p class="lead">Manvita Hub is studio management software for interior designers, architects, contractors and engineers. Track leads, site tasks, client fees and project costs, and get daily reminders so nothing slips.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://wa.me/918308707714?text=Hi%2C%20I%20would%20like%20a%20demo%20of%20Manvita%20Hub">Book a free demo on WhatsApp</a>
+          <a class="btn btn-ghost" href="#features">See features</a>
+        </div>
+        <p class="hero-note">One-time payment. No monthly subscription.</p>
+      </div>
+
+      <div class="mock" aria-label="Illustration of the Manvita Hub dashboard with sample data">
+        <div class="mock-bar"><i></i><i></i><i></i><span>Studio overview</span></div>
+        <div class="mock-body">
+          <div class="kpis">
+            <div class="kpi"><small>Active projects</small><b>12</b></div>
+            <div class="kpi"><small>New leads</small><b>8</b></div>
+            <div class="kpi"><small>Fees due</small><b>₹1.4L</b></div>
+          </div>
+          <div class="rows">
+            <div class="row"><div>3BHK interior, site measurement<small>Today, 4:00 pm</small></div><span class="pill due">Task due</span></div>
+            <div class="row"><div>Kitchen and wardrobe project<small>2nd instalment received</small></div><span class="pill ok">Paid</span></div>
+            <div class="row"><div>Office cabin enquiry<small>From WhatsApp</small></div><span class="pill new">New lead</span></div>
+          </div>
+        </div>
+        <p class="mock-foot">Sample data for illustration.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="features" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Everything a studio tracks, in one place</h2>
+        <p>Built from the day-to-day work of a running interior design studio, then opened up for other firms.</p>
+      </div>
+      <div class="grid3">
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>Leads and enquiries</h3>
+          <p>Log every enquiry, see who has been contacted, and follow up before a lead goes cold.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <h3>Site tasks and visits</h3>
+          <p>Plan site visits, measurements and carpenter work, with a clear list of what is due today.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></div>
+          <h3>Fees and payments</h3>
+          <p>Record client instalments and see pending fees at a glance, project by project.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>Project costing</h3>
+          <p>For turnkey and with-material jobs: track costs already spent and costs still coming.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <h3>Daily reminders</h3>
+          <p>A morning summary of fees and tasks, sent to the studio owner every day.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v3"/></svg></div>
+          <h3>Voice entry</h3>
+          <p>Add leads and tasks by speaking in Hindi, Marathi or English. The app asks for anything missing.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>What we do</h2>
-    <ul>
-      <li>Custom software development for small and growing businesses</li>
-      <li>CRM setup and customer management systems</li>
-      <li>Business workflow automation</li>
-      <li>WhatsApp messaging for customer updates and enquiries, through the WhatsApp Business Platform</li>
-    </ul>
+  <section id="who">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Who it's for</h2>
+        <p>Any firm that juggles clients, sites and payments at the same time.</p>
+      </div>
+      <div class="who">
+        <span>Interior designers</span><span>Architects</span><span>Contractors</span><span>Civil engineers</span><span>Construction firms</span><span>Turnkey project studios</span>
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact us</h2>
-    <dl class="facts">
-      <dt>Phone</dt><dd><a href="tel:+918308707714">+91 83087 07714</a></dd>
-      <dt>Email</dt><dd><a href="mailto:manvitahub2305@gmail.com">manvitahub2305@gmail.com</a></dd>
-      <dt>Address</dt><dd>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule, Maharashtra 424001, India</dd>
-      <dt>Hours</dt><dd>Monday to Saturday, 10:00 to 19:00 IST</dd>
-    </dl>
+  <section class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>How we work with you</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><b>Step 1</b><h3>Free demo</h3><p>We show you the hub on a call or in person and listen to how your studio runs.</p></div>
+        <div class="step"><b>Step 2</b><h3>Your branding</h3><p>The hub carries your studio's name and logo, so your team and clients see your brand.</p></div>
+        <div class="step"><b>Step 3</b><h3>Custom setup</h3><p>We switch on only the modules you need and add your projects and team.</p></div>
+        <div class="step"><b>Step 4</b><h3>Support</h3><p>We help you get started and stay reachable on WhatsApp and phone.</p></div>
+      </div>
+    </div>
   </section>
 
-  <section id="privacy">
-    <h2>Privacy policy</h2>
-    <p class="small">Last updated: 12 November 2026</p>
-    <p>This policy explains how Manvita Hub ("we", "us") collects and uses personal information when you contact us, use our services, or message us on WhatsApp.</p>
-    <h3>Information we collect</h3>
-    <ul>
-      <li>Your name, phone number and email address when you contact us or become a client.</li>
-      <li>The content of messages you send us, including on WhatsApp.</li>
-      <li>Business details you share with us to deliver a project.</li>
-    </ul>
-    <h3>How we use it</h3>
-    <ul>
-      <li>To reply to your enquiries and provide our services.</li>
-      <li>To send you service updates, reminders and messages you have agreed to receive.</li>
-      <li>To keep records required by law.</li>
-    </ul>
-    <h3>WhatsApp messages</h3>
-    <p>We use the WhatsApp Business Platform provided by Meta to send and receive messages. Messages are processed by Meta under its own terms and privacy policy. We only message you on WhatsApp if you have contacted us there or agreed to receive messages from us. You can stop messages at any time by replying "STOP".</p>
-    <h3>Sharing</h3>
-    <p>We do not sell your personal information. We share it only with service providers we need to run our business (such as Meta for WhatsApp messaging and our hosting providers), or when the law requires it.</p>
-    <h3>Storage and security</h3>
-    <p>We keep your information only as long as needed for the purposes above or as required by law, and we take reasonable steps to protect it.</p>
-    <h3>Your rights</h3>
-    <p>You can ask us to see, correct or delete your personal information by emailing manvitahub2305@gmail.com. See the data deletion section below.</p>
+  <section id="pricing">
+    <div class="wrap price">
+      <div>
+        <div class="sec-head">
+          <h2>Simple pricing: pay once, use for life</h2>
+          <p>No monthly subscription. The price depends on the modules and customisation your studio needs.</p>
+        </div>
+        <ul>
+          <li>One-time payment for lifetime use</li>
+          <li>Your studio's own branding inside the app</li>
+          <li>Only the modules you need, switched on for you</li>
+          <li>Works on phone and computer, in the browser</li>
+        </ul>
+      </div>
+      <div class="quote-box">
+        <h3>Get a quote for your studio</h3>
+        <p>Tell us your team size and how you work. We will suggest a setup and share the price.</p>
+        <a class="btn btn-primary" href="https://wa.me/918308707714?text=Hi%2C%20please%20share%20Manvita%20Hub%20pricing">Ask for a quote on WhatsApp</a>
+      </div>
+    </div>
   </section>
 
-  <section id="data-deletion">
-    <h2>Data deletion instructions</h2>
-    <p>To ask us to delete the personal information we hold about you, including WhatsApp message history:</p>
-    <ul>
-      <li>Email manvitahub2305@gmail.com with the subject "Data deletion request", or send "DELETE MY DATA" to +91 83087 07714 on WhatsApp.</li>
-      <li>Include the phone number or email address you used with us.</li>
-      <li>We will confirm and complete the deletion within 30 days, except records we must keep by law.</li>
-    </ul>
-  </section>
-
-  <section id="terms">
-    <h2>Terms of service</h2>
-    <p>Project scope, timelines and fees are agreed in writing with each client before work begins. Information on this website is for general purposes. These terms are governed by the laws of India, and courts at Dhule, Maharashtra have jurisdiction.</p>
+  <section id="contact" class="alt">
+    <div class="wrap contact">
+      <div class="sec-head">
+        <h2>Contact us</h2>
+        <p>We reply on WhatsApp, phone and email, Monday to Saturday, 10 am to 7 pm.</p>
+      </div>
+      <dl class="facts">
+        <dt>Business</dt><dd>Manvita Hub</dd>
+        <dt>Proprietor</dt><dd>Disha Manoj Agrawal</dd>
+        <dt>Phone / WhatsApp</dt><dd><a href="tel:+918308707714">+91 83087 07714</a></dd>
+        <dt>Email</dt><dd><a href="mailto:manvitahub2305@gmail.com">manvitahub2305@gmail.com</a></dd>
+        <dt>Address</dt><dd>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule, Maharashtra 424001, India</dd>
+      </dl>
+    </div>
   </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Manvita Hub · Proprietor: Disha Manoj Agrawal</p>
-    <p>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule, Maharashtra 424001, India · +91 83087 07714 · manvitahub2305@gmail.com</p>
+    <div class="cols">
+      <div>
+        <a class="logo" href="#top" aria-label="Manvita Hub home">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1a5556"/><path d="M15 46V20l17 15 17-15v26" fill="none" stroke="#f2b544" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="15" cy="20" r="4.5" fill="#fff"/><circle cx="49" cy="20" r="4.5" fill="#fff"/><circle cx="32" cy="35" r="4.5" fill="#fff"/></svg>
+          <span><b>Manvita Hub</b></span>
+        </a>
+        <p style="margin-top:10px;max-width:40ch">Software development and studio management solutions for businesses.</p>
+      </div>
+      <div>
+        <p><a href="privacy.html">Privacy policy</a></p>
+        <p><a href="privacy.html#data-deletion">Data deletion</a></p>
+        <p><a href="privacy.html#terms">Terms of service</a></p>
+      </div>
+    </div>
+    <p class="legal">© 2026 Manvita Hub, a sole proprietorship registered under the Maharashtra Shops and Establishments Act. Plot No. 135, Chitod Road, Sudarshan Colony, Dhule (Municipal Corporation), Taluka &amp; District Dhule, Maharashtra 424001, India.</p>
   </div>
 </footer>
 </body>
