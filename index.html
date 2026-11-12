@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manvita Hub</title>
+<meta name="description" content="Manvita Hub, software development and CRM solutions for businesses. Dhule, Maharashtra, India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Layout: one centred column, letterhead-style header, plain business-record sections */
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #17202b;
+  --muted: #566273;
+  --accent: #1f5f8b;
+  --line: #dde2e8;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --surface: #18202a; --ink: #e6ebf1; --muted: #9aa7b6;
+    --accent: #7fb7de; --line: #2a3542; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161c; --surface: #18202a; --ink: #e6ebf1; --muted: #9aa7b6;
+  --accent: #7fb7de; --line: #2a3542; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.6;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+header { background: var(--surface); border-bottom: 1px solid var(--line); }
+.head { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding: 20px 0; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.mark {
+  width: 40px; height: 40px; border-radius: 8px; background: var(--accent); color: var(--surface);
+  display: grid; place-items: center; font-family: var(--font-display); font-size: 22px;
+}
+.brand-name { font-family: var(--font-display); font-size: 22px; font-weight: 600; margin: 0; }
+nav { display: flex; flex-wrap: wrap; gap: 16px; font-size: 14px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+nav a { text-decoration: none; font-weight: 500; }
+nav a:hover { text-decoration: underline; }
+main { padding: 32px 0 48px; display: grid; gap: 24px; }
+section {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 24px;
+}
+h1, h2 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; line-height: 1.25; }
+h1 { font-size: 30px; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 0 0 12px; }
+h3 { font-size: 16px; margin: 20px 0 6px; }
+p { margin: 0 0 12px; max-width: 65ch; }
+.lede { color: var(--muted); font-size: 17px; }
+ul { margin: 0 0 12px; padding-left: 20px; }
+li { margin-bottom: 4px; }
+dl.facts { display: grid; grid-template-columns: max-content 1fr; gap: 8px 20px; margin: 0; }
+dl.facts dt { color: var(--muted); font-size: 14px; }
+dl.facts dd { margin: 0; font-weight: 500; }
+@media (max-width: 480px) {
+  dl.facts { grid-template-columns: 1fr; gap: 2px; }
+  dl.facts dd { margin-bottom: 10px; }
+}
+.small { font-size: 14px; color: var(--muted); }
+footer { border-top: 1px solid var(--line); background: var(--surface); }
+footer .wrap { padding: 20px; font-size: 14px; color: var(--muted); }
+footer p { margin: 0 0 4px; max-width: none; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap head">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">M</div>
+      <p class="brand-name">Manvita Hub</p>
+    </div>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#privacy">Privacy policy</a>
+      <a href="#data-deletion">Data deletion</a>
+      <a href="#terms">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="about">
+    <h1>Manvita Hub</h1>
+    <p class="lede">Software development and CRM solutions for businesses. Based in Dhule, Maharashtra, India.</p>
+    <dl class="facts">
+      <dt>Legal name</dt><dd>Manvita Hub</dd>
+      <dt>Proprietor</dt><dd>Disha Manoj Agrawal</dd>
+      <dt>Business type</dt><dd>Sole proprietorship, registered under the Maharashtra Shops and Establishments Act</dd>
+      <dt>Registered address</dt><dd>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule (Municipal Corporation), Taluka &amp; District Dhule, Maharashtra 424001, India</dd>
+      <dt>Phone / WhatsApp</dt><dd>+91 83087 07714</dd>
+      <dt>Email</dt><dd>manvitahub2305@gmail.com</dd>
+    </dl>
+  </section>
+
+  <section id="services">
+    <h2>What we do</h2>
+    <ul>
+      <li>Custom software development for small and growing businesses</li>
+      <li>CRM setup and customer management systems</li>
+      <li>Business workflow automation</li>
+      <li>WhatsApp messaging for customer updates and enquiries, through the WhatsApp Business Platform</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact us</h2>
+    <dl class="facts">
+      <dt>Phone</dt><dd><a href="tel:+918308707714">+91 83087 07714</a></dd>
+      <dt>Email</dt><dd><a href="mailto:manvitahub2305@gmail.com">manvitahub2305@gmail.com</a></dd>
+      <dt>Address</dt><dd>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule, Maharashtra 424001, India</dd>
+      <dt>Hours</dt><dd>Monday to Saturday, 10:00 to 19:00 IST</dd>
+    </dl>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy policy</h2>
+    <p class="small">Last updated: 12 November 2026</p>
+    <p>This policy explains how Manvita Hub ("we", "us") collects and uses personal information when you contact us, use our services, or message us on WhatsApp.</p>
+    <h3>Information we collect</h3>
+    <ul>
+      <li>Your name, phone number and email address when you contact us or become a client.</li>
+      <li>The content of messages you send us, including on WhatsApp.</li>
+      <li>Business details you share with us to deliver a project.</li>
+    </ul>
+    <h3>How we use it</h3>
+    <ul>
+      <li>To reply to your enquiries and provide our services.</li>
+      <li>To send you service updates, reminders and messages you have agreed to receive.</li>
+      <li>To keep records required by law.</li>
+    </ul>
+    <h3>WhatsApp messages</h3>
+    <p>We use the WhatsApp Business Platform provided by Meta to send and receive messages. Messages are processed by Meta under its own terms and privacy policy. We only message you on WhatsApp if you have contacted us there or agreed to receive messages from us. You can stop messages at any time by replying "STOP".</p>
+    <h3>Sharing</h3>
+    <p>We do not sell your personal information. We share it only with service providers we need to run our business (such as Meta for WhatsApp messaging and our hosting providers), or when the law requires it.</p>
+    <h3>Storage and security</h3>
+    <p>We keep your information only as long as needed for the purposes above or as required by law, and we take reasonable steps to protect it.</p>
+    <h3>Your rights</h3>
+    <p>You can ask us to see, correct or delete your personal information by emailing manvitahub2305@gmail.com. See the data deletion section below.</p>
+  </section>
+
+  <section id="data-deletion">
+    <h2>Data deletion instructions</h2>
+    <p>To ask us to delete the personal information we hold about you, including WhatsApp message history:</p>
+    <ul>
+      <li>Email manvitahub2305@gmail.com with the subject "Data deletion request", or send "DELETE MY DATA" to +91 83087 07714 on WhatsApp.</li>
+      <li>Include the phone number or email address you used with us.</li>
+      <li>We will confirm and complete the deletion within 30 days, except records we must keep by law.</li>
+    </ul>
+  </section>
+
+  <section id="terms">
+    <h2>Terms of service</h2>
+    <p>Project scope, timelines and fees are agreed in writing with each client before work begins. Information on this website is for general purposes. These terms are governed by the laws of India, and courts at Dhule, Maharashtra have jurisdiction.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Manvita Hub · Proprietor: Disha Manoj Agrawal</p>
+    <p>Plot No. 135, Chitod Road, Sudarshan Colony, Dhule, Maharashtra 424001, India · +91 83087 07714 · manvitahub2305@gmail.com</p>
+  </div>
+</footer>
+</body>
+</html>
